@@ -363,11 +363,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    padding: 0 16px;
+  }
+  .logo {
+    margin: 0;
+    text-align: left;
+    flex: 0 0 auto;
+  }
+  .menu-toggle {
+    margin-left: 0;
+    margin-right: 0;
+    margin-left: auto;
   }
   .nav {
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 16px;
+    left: auto;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     flex-direction: column;
@@ -416,6 +429,16 @@ body {
 }
 
 @media (min-width: 769px) {
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    text-align: left;
+    margin: 0;
+    flex: 0 0 auto;
+  }
   .menu-toggle {
     display: none;
   }
