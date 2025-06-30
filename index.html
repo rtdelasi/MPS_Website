@@ -12,7 +12,12 @@
     <header class="header">
         <div class="container header-top">
             <div class="logo">MP<span>S</span></div>
-            <nav class="nav" style="margin-left:auto;">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu" style="margin-left:auto;">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
@@ -148,5 +153,15 @@
             <p>&copy; 2024 ElectroPro Engineering. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('open');
+    });
+    </script>
 </body>
 </html>
