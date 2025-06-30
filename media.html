@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery - Modes Power Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-top">
+            <div class="logo">MP<span>S</span></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu" style="margin-left:auto;">
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="media.html" class="active">Media</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Explore our professional electrical engineering projects and installations</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="electrical">Electrical</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="media" id="media">
+        <div class="container">
+            <div class="media-grid">
+                <!-- Electrical Category -->
+                <div class="media-item" data-category="electrical">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Electrical Installation">
+                    <div class="media-overlay">
+                        <h3>Electrical Installation</h3>
+                        <p>Professional electrical installation services for commercial and industrial facilities</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="electrical">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=80" alt="Power Distribution">
+                    <div class="media-overlay">
+                        <h3>Power Distribution</h3>
+                        <p>Efficient power distribution systems and grid management</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="electrical">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80" alt="Renewable Energy">
+                    <div class="media-overlay">
+                        <h3>Renewable Energy</h3>
+                        <p>Solar and renewable energy system installations</p>
+                    </div>
+                </div>
+
+                <!-- Automation Category -->
+                <div class="media-item" data-category="automation">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Automation Systems">
+                    <div class="media-overlay">
+                        <h3>Automation Systems</h3>
+                        <p>Industrial automation and control systems for enhanced efficiency</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="automation">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=80" alt="Control Systems">
+                    <div class="media-overlay">
+                        <h3>Control Systems</h3>
+                        <p>Advanced control and monitoring systems</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="automation">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Smart Metering">
+                    <div class="media-overlay">
+                        <h3>Smart Metering</h3>
+                        <p>Advanced metering solutions for energy management</p>
+                    </div>
+                </div>
+
+                <!-- Networking Category -->
+                <div class="media-item" data-category="networking">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Network Setup">
+                    <div class="media-overlay">
+                        <h3>Network Setup</h3>
+                        <p>Complete network infrastructure setup and configuration</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="networking">
+                    <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=400&q=80" alt="Data Center Solutions">
+                    <div class="media-overlay">
+                        <h3>Data Center Solutions</h3>
+                        <p>Complete data center infrastructure and management solutions</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="networking">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=80" alt="Server Installation">
+                    <div class="media-overlay">
+                        <h3>Server Installation</h3>
+                        <p>Professional server and network equipment installation</p>
+                    </div>
+                </div>
+
+                <!-- Maintenance Category -->
+                <div class="media-item" data-category="maintenance">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="System Maintenance">
+                    <div class="media-overlay">
+                        <h3>System Maintenance</h3>
+                        <p>Regular maintenance and system checks to ensure optimal performance</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="maintenance">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=80" alt="Emergency Systems">
+                    <div class="media-overlay">
+                        <h3>Emergency Systems</h3>
+                        <p>Backup power and emergency electrical systems</p>
+                    </div>
+                </div>
+                <div class="media-item" data-category="maintenance">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Preventive Maintenance">
+                    <div class="media-overlay">
+                        <h3>Preventive Maintenance</h3>
+                        <p>Scheduled maintenance and system optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-content">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Ready to start your project or need more information? Reach out to us!</p>
+                <ul>
+                    <li><strong>Phone:</strong> +233 244 380 176</li>
+                    <li><strong>Email:</strong> modes775@gmail.com</li>
+                    <li><strong>Address:</strong> Westhill City house no. E119 </li>
+                </ul>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Modes Power Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('open');
+    });
+    
+    // Close menu when a nav link is clicked (mobile)
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('open');
+        });
+    });
+
+    // Gallery filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const mediaItems = document.querySelectorAll('.media-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filter = button.getAttribute('data-filter');
+            
+            mediaItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s ease-in-out';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html> 
