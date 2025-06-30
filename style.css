@@ -4,6 +4,7 @@ body {
     padding: 0;
     background: #f7f9fb;
     color: #222;
+    overflow-x: hidden;
 }
 
 .container {
@@ -365,6 +366,9 @@ body {
     justify-content: space-between;
     position: relative;
     padding: 0 16px;
+    height: 60px;
+    min-height: 0;
+    margin: 0;
   }
   .logo {
     margin: 0;
@@ -388,43 +392,19 @@ body {
     width: 180px;
     display: none;
     z-index: 100;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    height: auto;
   }
   .nav.active {
     display: flex;
-  }
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    z-index: 101;
-  }
-  .menu-toggle .bar {
-    width: 100%;
-    height: 4px;
-    background: #222;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
-  .menu-toggle.open .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .menu-toggle.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.open .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
   .nav a {
     padding: 12px 20px;
     width: 100%;
     border-bottom: 1px solid #eee;
+    margin: 0;
   }
 }
 
