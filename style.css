@@ -57,56 +57,13 @@ body {
     gap: 1.5rem;
 }
 
-.hero {
-    background: linear-gradient(90deg, #1a237e 60%, #e53935 100%);
-    color: #fff;
-    padding: 3rem 0 2rem 0;
-}
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.hero-text {
-    flex: 1 1 350px;
-    margin-right: 2rem;
-}
-.hero-text h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-.hero-text h1 span {
-    color: #e53935;
-}
-.hero-text p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-.hero-stats {
-    display: flex;
-    gap: 2rem;
-}
-.stat span {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e53935;
-}
-.stat p {
-    margin: 0.2rem 0 0 0;
-    font-size: 1rem;
-}
-.hero-img {
-    flex: 1 1 300px;
-    text-align: right;
-}
-.hero-img img {
-    max-width: 350px;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 4px 24px rgba(26,35,126,0.15);
-}
+/* Remove Hostel Hubb-inspired custom styles */
+/* .hostel-header, .hostel-header-inner, .hostel-nav, .header-cta-btn, .hostel-hero, .hostel-hero-content, .hostel-hero-main, .hostel-hero-tip, .hostel-hero-btn {
+    display: none !important;
+} */
+
+/* Hero Section */
+/* .hero-content, .hero-text, .hero-img { display: none !important; } */
 
 .about {
     background: #fff;
@@ -484,81 +441,69 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 900px) {
-    .hero-content, .about-content, .contact-content, .services-list {
+    .container {
+        width: 98%;
+        padding: 0 1vw;
+    }
+    .header-top, .hero-content, .about-content, .services-list, .contact-content {
         flex-direction: column;
-        text-align: center;
+        gap: 1.5rem;
+        align-items: stretch;
     }
     .hero-img, .about-img {
         text-align: center;
-        margin: 2rem 0 0 0;
-    }
-    .hero-text, .about-text, .contact-info, .contact-form {
         margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        padding: 1rem 0;
+        box-shadow: 0 2px 8px rgba(26,35,126,0.07);
+        z-index: 1000;
+        display: none;
+    }
+    .nav.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }
 @media (max-width: 600px) {
     .container {
-        width: 98%;
-        padding: 0 0.5rem;
+        width: 100vw;
+        padding: 0 2vw;
     }
-    .header-top {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .hero-text h1 {
-        font-size: 1.5rem;
-    }
-    .about-text h2, .services h2, .contact-info h2 {
+    .logo {
         font-size: 1.3rem;
     }
-    .service-card {
-        padding: 1rem;
+    .hero-text h1, .about-text h2, .services h2, .contact-info h2 {
+        font-size: 1.3rem;
+    }
+    .service-card, .project-card, .media-item {
         max-width: 100%;
+        padding: 1rem;
     }
-    .contact-form {
-        padding: 1rem 0.5rem;
+    .footer-col {
+        padding: 0.5rem 0;
     }
-    .page-header h1 {
-        font-size: 2rem;
-    }
-    .page-header p {
-        font-size: 1rem;
-    }
-    .page-header {
-        padding: 4rem 0 2rem;
-    }
-    .projects-list {
-        grid-template-columns: 1fr;
-    }
-    .projects-title {
-        font-size: 1.3rem;
-    }
-    .project-card {
-        padding: 1rem 0.5rem 0.5rem 0.5rem;
-    }
-    .media-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    .media-title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-    .media-item img {
-        height: 200px;
-    }
-    .media-overlay {
-        padding: 1.5rem 1rem 1rem;
-    }
-    .media-overlay h3 {
-        font-size: 1.1rem;
-    }
-    .filter-buttons {
+    .footer-socials {
         gap: 0.5rem;
     }
-    .filter-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+    .contact-form input, .contact-form textarea, .contact-form button {
+        font-size: 1rem;
+        padding: 0.7rem;
     }
 }
 @media (max-width: 1000px) {
@@ -728,3 +673,83 @@ body {
 }
 
 /* All contact page-specific styles have been moved to contact_styles.css */
+
+.hero {
+    background: url('images/hero-electricians.jpg') center center/cover no-repeat;
+    color: #fff;
+    padding: 3rem 0 2rem 0;
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55); /* black overlay for text readability */
+    z-index: 1;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+.hero-text {
+    flex: 1 1 350px;
+    margin-right: 2rem;
+}
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.hero-text h1 span {
+    color: #e53935;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+}
+.stat span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e53935;
+}
+.stat p {
+    margin: 0.2rem 0 0 0;
+    font-size: 1rem;
+}
+.hero-img {
+    flex: 1 1 300px;
+    text-align: right;
+}
+.hero-img img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(26,35,126,0.15);
+}
+.hero-down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 2.5rem;
+    color: #fff;
+    opacity: 0.85;
+    animation: bounceDown 1.5s infinite;
+    cursor: pointer;
+}
+@keyframes bounceDown {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(18px); }
+}

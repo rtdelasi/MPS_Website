@@ -188,7 +188,7 @@
 @media (max-width: 1000px) {
     .contact-ref-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.2rem;
         max-width: 98vw;
         align-items: stretch;
     }
@@ -199,18 +199,22 @@
 }
 @media (max-width: 600px) {
     .contact-ref-main {
-        padding: 0.7rem 0 0.2rem 0;
+        padding: 1.2rem 0 1rem 0;
     }
     .contact-ref-card, .contact-ref-info-card {
-        padding: 0.7rem 0.4rem 0.6rem 0.4rem;
-        border-radius: 0.7rem;
+        padding: 1rem 0.7rem 0.7rem 0.7rem;
+        border-radius: 0.6rem;
     }
     .form-row {
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.5rem;
     }
     .contact-ref-socials {
         gap: 0.3rem;
-        margin-top: 0.4rem;
+        font-size: 1rem;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 0.98rem;
+        padding: 0.6rem 0.7rem;
     }
 } 

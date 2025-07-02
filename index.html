@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
     <!-- Header -->
@@ -35,15 +36,15 @@
                 <p>Expert solutions for all your electrical engineering needs. From design to implementation, we power your success.</p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span>500+</span>
+                        <span class="count-up" data-target="500">0</span>+
                         <p>Projects Completed</p>
                     </div>
                     <div class="stat">
-                        <span>20+</span>
+                        <span class="count-up" data-target="20">0</span>+
                         <p>Years Experience</p>
                     </div>
                     <div class="stat">
-                        <span>300+</span>
+                        <span class="count-up" data-target="300">0</span>+
                         <p>Happy Clients</p>
                     </div>
                 </div>
@@ -52,10 +53,13 @@
                 <img src="images/hero-electricians.jpg" alt="Electrical workers on a pole">
             </div>
         </div>
+        <div class="hero-down-arrow" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-up">
         <div class="container about-content">
             <div class="about-img">
                 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="About ElectroPro">
@@ -71,7 +75,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services" id="services" data-aos="fade-up">
         <div class="container">
             <h2>Services That Fit <span>Your Needs</span></h2>
             <div class="services-list">
@@ -95,7 +99,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section class="projects" id="projects" data-aos="fade-up">
         <div class="container">
             <h2 class="projects-title">PROJECTS</h2>
             <div class="projects-list">
@@ -129,7 +133,7 @@
     <!-- End Projects Section -->
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
         <div class="container contact-content">
             <div class="contact-info">
                 <h2>Contact Us</h2>
@@ -150,7 +154,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="container footer-container">
             <div class="footer-col contact-col">
                 <h3>Contact Us</h3>
@@ -200,5 +204,7 @@
         });
     });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
