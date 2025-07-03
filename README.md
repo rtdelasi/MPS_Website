@@ -20,7 +20,7 @@ A modern, responsive website for an electrical engineering company, inspired by 
    ```
 2. **Navigate to the project folder:**
    ```bash
-   cd electropro-website
+   cd MPS_website
    ```
 3. **Open `index.html` in your browser:**
    - You can simply double-click `index.html` or use a local server for development.
