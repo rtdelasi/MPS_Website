@@ -1,4 +1,4 @@
-# ElectroPro Engineering Website
+# Modes Power Services Website
 
 A modern, responsive website for an electrical engineering company, inspired by leading industry designs. This project showcases company information, services, projects, and a contact form, using a clean and professional layout with blue and red accent colors.
 
