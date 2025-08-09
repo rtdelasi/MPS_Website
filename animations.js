@@ -41,4 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // in case already in view
-}); 
+
+  document.querySelector('.hero-down-arrow').onclick = function(e) {
+    e.preventDefault();
+    const target = document.getElementById('about');
+    const headerOffset = 55; // Adjust this value to your header's height
+    const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+};
+});

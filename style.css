@@ -770,7 +770,7 @@ html, body {
     color: #fff;
     padding: 3rem 0 2rem 0;
     position: relative;
-    min-height: 70vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -784,17 +784,21 @@ html, body {
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center; /* Change to center */
+    flex-direction: column; /* Add this */
     position: relative;
     z-index: 2;
+    width: 100%; /* Add this */
 }
 .hero-text {
     flex: 1 1 350px;
     margin-right: 2rem;
+    text-align: center; /* Add this */
+    margin: 0 auto; /* Add this */
+    max-width: 800px; /* Add this */
 }
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -808,6 +812,8 @@ html, body {
 .hero-stats {
     display: flex;
     gap: 2rem;
+    justify-content: center; /* Add this */
+    width: 100%; /* Add this */
 }
 .stat span {
     font-size: 2rem;
