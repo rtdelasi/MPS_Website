@@ -677,102 +677,168 @@ html, body {
     }
 }
 
-/* Responsive Design */
+/* --- IMPROVED RESPONSIVENESS --- */
+
+/* Make sure all sections use full width */
+section, header, footer {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ensure .container is always fluid */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    box-sizing: border-box;
+}
+
+/* Responsive grids for services, projects, media, and footer */
+.services-list,
+.projects-list,
+.media-grid,
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Responsive about and contact sections */
+.about-content,
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+.about-img,
+.contact-info,
+.contact-form {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Responsive images */
+img, video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive hero section */
+.hero-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.hero-text,
+.hero-img {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.hero-img img {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Responsive stats */
+.hero-stats {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.stat {
+    width: 30%;
+    min-width: 100px;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Responsive footer columns */
+.footer-col {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* --- MEDIA QUERIES --- */
 @media (max-width: 1024px) {
     .container {
-        padding: 0 1.5rem;
+        padding-left: 2%;
+        padding-right: 2%;
     }
-    
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-    
-    .page-header h1 {
-        font-size: 2.5rem;
-    }
-    
+    .hero-text h1,
+    .page-header h1,
     .media-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 0 2%;
-    }
     .header-top {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
     .nav {
         width: 100%;
-    }
-    .hero {
-        min-height: 60vh;
-        padding: 1.5rem 0 1rem 0;
-    }
-    .hero-content {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        gap: 0;
     }
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto 1rem auto;
-        text-align: center;
-    }
-    .hero-img {
-        width: 100%;
-        margin-top: 1rem;
-        text-align: center;
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+        gap: 1.5rem;
     }
     .hero-img img {
         width: 95%;
         max-width: 320px;
-    }
-    .hero-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
     }
     .stat {
         width: 80%;
         min-width: 0;
     }
     .footer-container {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .footer-col {
-        width: 100%;
-        margin-bottom: 1.5rem;
-        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 1%;
+        padding-left: 1%;
+        padding-right: 1%;
     }
     .hero {
         min-height: 50vh;
         padding: 1rem 0 0.5rem 0;
     }
     .hero-text h1 {
-        font-size: 2rem;
-    }
-    .hero-img img {
-        width: 100%;
-        max-width: 100%;
+        font-size: 1.4rem;
     }
     .stat {
         width: 100%;
     }
     .footer-col {
         margin-bottom: 1rem;
+    }
+    .services-list,
+    .projects-list,
+    .media-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
