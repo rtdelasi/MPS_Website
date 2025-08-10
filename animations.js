@@ -54,4 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
         behavior: 'smooth'
     });
 };
+
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+});
+
+// Optional: Close menu when a nav link is clicked (on mobile)
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('open');
+    });
+});
 });
